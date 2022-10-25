@@ -36,9 +36,8 @@ const handleChoice = (card) => {
 
 //compare two selected cards
 useEffect(() => {
-  setDisabled(true)
   if (choiceOne && choiceTwo) {
-
+    setDisabled(true)
      if (choiceOne.src === choiceTwo.src) {
         setCards(prevCards => {
           return prevCards.map(card => {
@@ -85,6 +84,7 @@ const resetTurn = () => {
         ))}
 
       </div>
+      <p>Turns: {turns}</p>
     </div>
   );
 }
